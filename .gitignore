@@ -3,3 +3,4 @@
 package-lock.json
 app/bundle.js
 app/bundle.css
+app/bundle.js.map

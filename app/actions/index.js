@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
   FETCH_MOVIES_REQUEST,
   FETCH_MOVIES_FAILURE,
@@ -9,7 +10,6 @@ import {
   CHANGE_TYPE_OF_SORT,
 } from '../constants';
 import { apiKey } from '../../config';
-
 
 export const moviesRequest = isMoviesRequest => (
   {
@@ -67,35 +67,72 @@ export const changeTypeOfSort = buttonValue => (
   }
 );
 
+// export const getFilms = (searchValue, buttonValueForSearch) => (dispatch) => {
+//   dispatch(moviesRequest(true));
+//   fetch(`https://api.themoviedb.org/3/search/${buttonValueForSearch}?api_key=${apiKey}&query=${searchValue.replace(' ', '+')}`)
+//     .then((response) => {
+//       dispatch(moviesRequest(false));
+//       return response.json();
+//     })
+//     .then((data) => {
+//       dispatch(moviesReceive(data.results));
+//     });
+// };
+
 export const getFilms = (searchValue, buttonValueForSearch) => (dispatch) => {
   dispatch(moviesRequest(true));
-  fetch(`https://api.themoviedb.org/3/search/${buttonValueForSearch}?api_key=${apiKey}&query=${searchValue.replace(' ', '+')}`)
+  axios.get(`https://api.themoviedb.org/3/search/${buttonValueForSearch}?api_key=${apiKey}&query=${searchValue.replace(' ', '+')}`)
     .then((response) => {
       dispatch(moviesRequest(false));
-      return response.json();
+      return response.data;
     })
     .then((data) => {
+      console.log(data.total_results);
       dispatch(moviesReceive(data.results));
     });
 };
 
+// export const getCurrentFilm = currentFilmId => (dispatch) => {
+//   dispatch(moviesRequest(true));
+//   fetch(`https://api.themoviedb.org/3/movie/${currentFilmId}?api_key=${apiKey}`)
+//     .then((response) => {
+//       dispatch(moviesRequest(false));
+//       return response.json();
+//     })
+//     .then((data) => {
+//       dispatch(currentMovieReceive(data));
+//     });
+// };
+
 export const getCurrentFilm = currentFilmId => (dispatch) => {
   dispatch(moviesRequest(true));
-  fetch(`https://api.themoviedb.org/3/movie/${currentFilmId}?api_key=${apiKey}`)
+  axios.get(`https://api.themoviedb.org/3/movie/${currentFilmId}?api_key=${apiKey}`)
     .then((response) => {
       dispatch(moviesRequest(false));
-      return response.json();
+      return response.data;
     })
     .then((data) => {
       dispatch(currentMovieReceive(data));
     });
 };
 
+// export const getSimilarFilms = currentFilmId => (dispatch) => {
+//   dispatch(similarMoviesRequest(true));
+//   fetch(`https://api.themoviedb.org/3/movie/${currentFilmId}/similar?api_key=${apiKey}`)
+//     .then(response =>
+//       response.json(),
+//     )
+//     .then((data) => {
+//       dispatch(similarFilms(data));
+//       dispatch(similarMoviesRequest(false));
+//     });
+// };
+
 export const getSimilarFilms = currentFilmId => (dispatch) => {
   dispatch(similarMoviesRequest(true));
-  fetch(`https://api.themoviedb.org/3/movie/${currentFilmId}/similar?api_key=${apiKey}`)
+  axios.get(`https://api.themoviedb.org/3/movie/${currentFilmId}/similar?api_key=${apiKey}`)
     .then(response =>
-      response.json(),
+      response.data,
     )
     .then((data) => {
       dispatch(similarFilms(data));
