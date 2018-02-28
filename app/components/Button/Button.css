@@ -1,0 +1,23 @@
+.btn-raised {
+    margin: 0 10px;
+    padding: 5px 20px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background-color: #3f3c40;
+}
+
+.btn-flat {
+    font-size: 20px;
+	margin: 0 15px;
+	background-color: transparent;
+}
+
+.btn-raised.btn-active {
+    background-color: #f43659;
+}
+
+.btn-flat.btn-active {
+    color: #f43659;
+}

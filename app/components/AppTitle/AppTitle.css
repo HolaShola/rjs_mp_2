@@ -1,0 +1,13 @@
+.AppTitle {
+	display: inline-block;
+}
+
+.AppTitle a {
+	text-decoration: none;
+}
+
+.AppTitle p {
+	color: #f43659;
+	font-size: 22px;
+	padding: 20px 0;
+}

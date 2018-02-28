@@ -1,0 +1,9 @@
+{
+    "extends": "airbnb",
+    "globals": {
+        "fetch": true
+    },
+    "env": {
+        "browser": true
+    }
+}

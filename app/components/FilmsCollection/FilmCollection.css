@@ -1,0 +1,32 @@
+.sort {
+	height: 70px;
+	padding: 0 100px;
+	margin-bottom: 30px;
+	background-color: #ececec;
+	line-height: 70px;
+	font-size: 22px;
+}
+.sort div:first-child {
+	display: inline-block;
+}
+.sort_by p {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+.sort_by {
+	float: right;
+}
+.sort_by button {
+	font-size: 20px;
+	margin: 0 15px;
+	background-color: transparent;
+}
+.sort_by button:hover {
+	color: #f43659;
+}
+.discography {
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}

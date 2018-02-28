@@ -1,0 +1,12 @@
+.NotFound {
+    display: flex;
+    align-items: center;
+    height: 585px;
+    margin: 0 100px;
+}
+
+.NotFound-inner {
+    font-size: 48px;
+    margin: 0 auto;
+    opacity: 0.4;
+}

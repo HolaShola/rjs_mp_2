@@ -1,0 +1,19 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+button {
+	cursor: pointer;
+}
+.header {
+	background: linear-gradient(
+			rgba(0, 0, 0, 0.6),
+			rgba(0, 0, 0, 0.6)
+		),
+	url(https://goo.gl/Nv8423);
+	background-position: 82% 22%;
+}
+.header {
+	padding: 0 100px 30px;
+}

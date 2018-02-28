@@ -1,0 +1,16 @@
+.Footer {
+	background: #534b42;
+	height: 50px;
+	margin-top: 30px;
+}
+.Footer .footer_label {
+	padding: 0 100px;
+	line-height: 50px;
+}
+.Footer .footer_label a {
+	text-decoration: none;
+}
+.Footer p {
+	color: #f43659;
+	font-size: 22px;
+}

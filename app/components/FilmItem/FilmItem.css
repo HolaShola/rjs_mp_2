@@ -1,0 +1,30 @@
+.FilmItem {
+	width: 320px;
+	height: 508px;
+	margin: 30px 20px;
+}
+
+.film_description {
+	margin-top: 10px;
+}
+
+.FilmItem_img {
+	height: 450px;
+	border: 1px solid black;
+}
+
+.film_description .release_year {
+	float: right;
+	border: 2px solid #969696;
+	border-radius: 5px;
+	padding: 4px 15px;
+}
+
+.film_description .show_title {
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.film_description .category {
+	font-size: 18px;
+}
