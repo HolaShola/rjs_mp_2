@@ -21,6 +21,7 @@
     "classnames": "^2.2.5",
     "express": "^4.15.4",
     "extract-text-webpack-plugin": "^3.0.0",
+    "immutable": "^3.8.2",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
